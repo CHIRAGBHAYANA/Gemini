@@ -11,7 +11,7 @@ function getGitChanges() {
     const previousCommit = execSync('git rev-parse HEAD~1', { encoding: 'utf-8' }).toString().trim();
 
     const mergeCommitMessage = execSync('git log develop -1 --pretty=%s', { encoding: 'utf-8' }).trim();
-    const featureBranchMatch = mergeCommitMessage.match(/PTECH-\d+/i);
+    const featureBranchMatch = mergeCommitMessage.match(/DEMO-\d+/i);
     ticketNumber = featureBranchMatch ? featureBranchMatch[0] : '';
 
     allFilesList = execSync(`git diff --name-only ${previousCommit}..${lastCommit}`, { encoding: 'utf-8' })
