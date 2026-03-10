@@ -1,6 +1,6 @@
 import initReleaseNotesGenerationMethod from "./src/initReleaseNotesGenerationMethod.js";
 
-const GITHUB_TOKEN = "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";
+const GITHUB_TOKEN = ""
 
 if (GITHUB_TOKEN) {
   initReleaseNotesGenerationMethod();
